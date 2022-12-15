@@ -1,1 +1,4 @@
 Pods/
+DerivedData/
+build/
+GoogleMap/ApiToken.swift
