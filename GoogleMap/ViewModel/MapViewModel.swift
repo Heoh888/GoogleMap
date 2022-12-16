@@ -11,12 +11,10 @@ import CoreLocation
 class MapViewModel: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
 
-    // 1
      @Published var location: CLLocation? {
        willSet { objectWillChange.send() }
      }
     
-    // 2
     var latitude: CLLocationDegrees {
         return location?.coordinate.latitude ?? 0
     }
@@ -25,7 +23,6 @@ class MapViewModel: NSObject, ObservableObject {
         return location?.coordinate.longitude ?? 0
     }
     
-    // 3
     override init() {
       super.init()
 
@@ -37,7 +34,6 @@ class MapViewModel: NSObject, ObservableObject {
 }
 
 extension MapViewModel: CLLocationManagerDelegate {
-  // 4
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
         print(location.coordinate)
