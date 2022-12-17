@@ -10,7 +10,7 @@ import GoogleMaps
 
 struct MapView: UIViewRepresentable {
     
-    @ObservedObject var locationManager = MapViewModel()
+    @StateObject var locationManager = MapViewModel()
     private let zoom: Float = 15.0
     
     func makeUIView(context: Self.Context) -> GMSMapView {

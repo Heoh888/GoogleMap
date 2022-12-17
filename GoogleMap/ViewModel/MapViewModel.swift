@@ -10,10 +10,10 @@ import CoreLocation
 
 class MapViewModel: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
-
-     @Published var location: CLLocation? {
-       willSet { objectWillChange.send() }
-     }
+    
+    @Published var location: CLLocation? {
+        willSet { objectWillChange.send() }
+    }
     
     var latitude: CLLocationDegrees {
         return location?.coordinate.latitude ?? 0
@@ -24,12 +24,13 @@ class MapViewModel: NSObject, ObservableObject {
     }
     
     override init() {
-      super.init()
-
-      locationManager.delegate = self
-      locationManager.desiredAccuracy = kCLLocationAccuracyBest
-      locationManager.requestWhenInUseAuthorization()
-      locationManager.startUpdatingLocation()
+        super.init()
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 }
 
