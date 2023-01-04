@@ -8,11 +8,14 @@
 import Foundation
 import RealmSwift
 
-
-class RouteModel: Object {
+final class RouteModel: Object, Identifiable {
+    @objc dynamic var id = UUID().uuidString
     @objc dynamic var routeTime: String = ""
     
+    let latitude = List<Double>()
+    let longitude = List<Double>()
+    
     override class func primaryKey() -> String? {
-        return "routeTime"
+        return "id"
     }
 }

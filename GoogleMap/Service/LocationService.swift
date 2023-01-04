@@ -8,7 +8,7 @@
 import Combine
 import CoreLocation
 
-class MapViewModel: NSObject, ObservableObject {
+class LocationService: NSObject, ObservableObject {
     private let locationManager = CLLocationManager()
     
     @Published var location: CLLocation? {
@@ -17,7 +17,7 @@ class MapViewModel: NSObject, ObservableObject {
     
     var latitude: CLLocationDegrees {
         return location?.coordinate.latitude ?? 0
-    }
+    }           
     
     var longitude: CLLocationDegrees {
         return location?.coordinate.longitude ?? 0
@@ -34,10 +34,9 @@ class MapViewModel: NSObject, ObservableObject {
     }
 }
 
-extension MapViewModel: CLLocationManagerDelegate {
+extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        print(location.coordinate)
         self.location = location
     }
 }

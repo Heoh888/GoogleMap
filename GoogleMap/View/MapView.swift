@@ -7,23 +7,28 @@
 
 import SwiftUI
 import GoogleMaps
+import MapKit
 
 struct MapView: UIViewRepresentable {
     
-    @StateObject var locationManager = MapViewModel()
-    private let zoom: Float = 15.0
+    @EnvironmentObject var viewModel: MainViewModel
     
-    func makeUIView(context: Self.Context) -> GMSMapView {
-        let camera = GMSCameraPosition.camera(withLatitude: locationManager.latitude, longitude: locationManager.longitude, zoom: zoom)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        return mapView
+    func makeUIView(context: Context) -> GMSMapView {
+        let view = viewModel.mapView
+        view.isMyLocationEnabled = true
+        view.delegate = context.coordinator
+        return view
     }
     
     func updateUIView(_ mapView: GMSMapView, context: Context) {
-        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: locationManager.latitude, longitude: locationManager.longitude))
-        if let coordinate = locationManager.location?.coordinate {
-            let marker = GMSMarker(position: coordinate)
-            marker.map = mapView
-        }
+
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        return MapView.Coordinator()
+    }
+    
+    class Coordinator: NSObject, GMSMapViewDelegate {
+
     }
 }

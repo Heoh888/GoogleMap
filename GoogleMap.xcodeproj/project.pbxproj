@@ -10,11 +10,13 @@
 		72B28931D26366CEAE8F99A4 /* Pods_GoogleMap_GoogleMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DE222A00E455FB64A92322 /* Pods_GoogleMap_GoogleMapUITests.framework */; };
 		864A230A294BB10D002DE344 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A2309294BB10D002DE344 /* MapView.swift */; };
 		864A230D294BCC88002DE344 /* ApiToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A230C294BCC88002DE344 /* ApiToken.swift */; };
-		864A230F294C90B6002DE344 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A230E294C90B6002DE344 /* ContentViewModel.swift */; };
 		8665953C294E776A001B7394 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8665953B294E776A001B7394 /* Realm */; };
 		8665953E294E776A001B7394 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8665953D294E776A001B7394 /* RealmSwift */; };
 		86659541294E7CDE001B7394 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86659540294E7CDE001B7394 /* RealmService.swift */; };
 		86659544294E7D91001B7394 /* RouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86659543294E7D91001B7394 /* RouteModel.swift */; };
+		8685FC32295DD9AD00C2F87F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685FC31295DD9AD00C2F87F /* MainViewModel.swift */; };
+		8685FC34295E4B4900C2F87F /* ResponsiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685FC33295E4B4900C2F87F /* ResponsiveView.swift */; };
+		8685FC36295E4BA200C2F87F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8685FC35295E4BA200C2F87F /* MainView.swift */; };
 		86A4D9E4294E0FCA00FDD52A /* Pods_GoogleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A4D9E3294E0FCA00FDD52A /* Pods_GoogleMap.framework */; };
 		86C0578F294B92020047F3E7 /* GoogleMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C0578E294B92020047F3E7 /* GoogleMapApp.swift */; };
 		86C05791294B92020047F3E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C05790294B92020047F3E7 /* ContentView.swift */; };
@@ -24,7 +26,7 @@
 		86C057AA294B92030047F3E7 /* GoogleMapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C057A9294B92030047F3E7 /* GoogleMapUITests.swift */; };
 		86C057AC294B92030047F3E7 /* GoogleMapUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C057AB294B92030047F3E7 /* GoogleMapUITestsLaunchTests.swift */; };
 		86C057BB294B9AD00047F3E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C057BA294B9AD00047F3E7 /* AppDelegate.swift */; };
-		86C057BF294B9B5A0047F3E7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C057BE294B9B5A0047F3E7 /* MapViewModel.swift */; };
+		86C057BF294B9B5A0047F3E7 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C057BE294B9B5A0047F3E7 /* LocationService.swift */; };
 		A8B99B751598A6B991A5F108 /* Pods_GoogleMapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 703E24D8A854CD5BABCB98F1 /* Pods_GoogleMapTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,11 +55,13 @@
 		860F7E53294CBC0900B5FA21 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864A2309294BB10D002DE344 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		864A230C294BCC88002DE344 /* ApiToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiToken.swift; sourceTree = "<group>"; };
-		864A230E294C90B6002DE344 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		864A2310294C99EA002DE344 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		864A2312294C99EF002DE344 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86659540294E7CDE001B7394 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		86659543294E7D91001B7394 /* RouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteModel.swift; sourceTree = "<group>"; };
+		8685FC31295DD9AD00C2F87F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8685FC33295E4B4900C2F87F /* ResponsiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponsiveView.swift; sourceTree = "<group>"; };
+		8685FC35295E4BA200C2F87F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		86A4D9E3294E0FCA00FDD52A /* Pods_GoogleMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_GoogleMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86A4D9E5294E350300FDD52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		86C0578B294B92020047F3E7 /* GoogleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +75,7 @@
 		86C057A9294B92030047F3E7 /* GoogleMapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapUITests.swift; sourceTree = "<group>"; };
 		86C057AB294B92030047F3E7 /* GoogleMapUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		86C057BA294B9AD00047F3E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86C057BE294B9B5A0047F3E7 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		86C057BE294B9B5A0047F3E7 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		9B543FB37F7E1CCEC7FAA6B1 /* Pods-GoogleMapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapTests.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMapTests/Pods-GoogleMapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E0BE83E3FBD3B8FD29CF8E86 /* Pods-GoogleMap-GoogleMapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMap-GoogleMapUITests.release.xcconfig"; path = "Target Support Files/Pods-GoogleMap-GoogleMapUITests/Pods-GoogleMap-GoogleMapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E119A100DE690B59C16C8B86 /* Pods-GoogleMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMap.debug.xcconfig"; path = "Target Support Files/Pods-GoogleMap/Pods-GoogleMap.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		8665953F294E7CC9001B7394 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				86C057BE294B9B5A0047F3E7 /* LocationService.swift */,
 				86659540294E7CDE001B7394 /* RealmService.swift */,
 			);
 			path = Service;
@@ -123,6 +128,17 @@
 				86659543294E7D91001B7394 /* RouteModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8685FC372964242B00C2F87F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				864A230C294BCC88002DE344 /* ApiToken.swift */,
+				86C057BA294B9AD00047F3E7 /* AppDelegate.swift */,
+				86C05790294B92020047F3E7 /* ContentView.swift */,
+				86C0578E294B92020047F3E7 /* GoogleMapApp.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		86C05782294B92020047F3E7 = {
@@ -150,13 +166,11 @@
 		86C0578D294B92020047F3E7 /* GoogleMap */ = {
 			isa = PBXGroup;
 			children = (
-				86659542294E7D65001B7394 /* Model */,
+				8685FC372964242B00C2F87F /* Resources */,
 				8665953F294E7CC9001B7394 /* Service */,
-				86C057B9294B9AB30047F3E7 /* ViewModel */,
+				86659542294E7D65001B7394 /* Model */,
 				86C057B8294B9AA90047F3E7 /* View */,
-				86C0578E294B92020047F3E7 /* GoogleMapApp.swift */,
-				86C057BA294B9AD00047F3E7 /* AppDelegate.swift */,
-				864A230C294BCC88002DE344 /* ApiToken.swift */,
+				86C057B9294B9AB30047F3E7 /* ViewModel */,
 				86A4D9E5294E350300FDD52A /* Info.plist */,
 				86C05792294B92030047F3E7 /* Assets.xcassets */,
 				86C05794294B92030047F3E7 /* Preview Content */,
@@ -192,8 +206,9 @@
 		86C057B8294B9AA90047F3E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				86C05790294B92020047F3E7 /* ContentView.swift */,
 				864A2309294BB10D002DE344 /* MapView.swift */,
+				8685FC33295E4B4900C2F87F /* ResponsiveView.swift */,
+				8685FC35295E4BA200C2F87F /* MainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,8 +216,7 @@
 		86C057B9294B9AB30047F3E7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				86C057BE294B9B5A0047F3E7 /* MapViewModel.swift */,
-				864A230E294C90B6002DE344 /* ContentViewModel.swift */,
+				8685FC31295DD9AD00C2F87F /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -483,14 +497,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				864A230A294BB10D002DE344 /* MapView.swift in Sources */,
+				8685FC36295E4BA200C2F87F /* MainView.swift in Sources */,
+				8685FC32295DD9AD00C2F87F /* MainViewModel.swift in Sources */,
 				86C057BB294B9AD00047F3E7 /* AppDelegate.swift in Sources */,
-				86C057BF294B9B5A0047F3E7 /* MapViewModel.swift in Sources */,
+				86C057BF294B9B5A0047F3E7 /* LocationService.swift in Sources */,
 				86659544294E7D91001B7394 /* RouteModel.swift in Sources */,
-				864A230F294C90B6002DE344 /* ContentViewModel.swift in Sources */,
 				86C05791294B92020047F3E7 /* ContentView.swift in Sources */,
 				86C0578F294B92020047F3E7 /* GoogleMapApp.swift in Sources */,
 				864A230D294BCC88002DE344 /* ApiToken.swift in Sources */,
 				86659541294E7CDE001B7394 /* RealmService.swift in Sources */,
+				8685FC34295E4B4900C2F87F /* ResponsiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

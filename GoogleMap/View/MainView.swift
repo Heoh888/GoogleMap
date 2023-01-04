@@ -1,28 +1,31 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  GoogleMap
 //
-//  Created by Алексей Ходаков on 15.12.2022.
+//  Created by Алексей Ходаков on 30.12.2022.
 //
 
 import SwiftUI
+import GoogleMaps
 
-struct ContentView: View {
+struct MainView: View {
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
-    @State var time = 0
     @State var startNewTrack = false
     @State var previousRoute = false
-    @StateObject var viewModel = ContentViewModel()
+    @State var locationManager = CLLocationManager()
+    @StateObject var viewModel = MainViewModel()
+    
+    var props: Properties
     
     var body: some View {
         VStack {
             MapView()
-            //                .animation(nil)
+                .environmentObject(viewModel)
         }
         .overlay(alignment: .top) {
-            bottompReviousRoute()
+            if !props.isLandscape {
+                bottompReviousRoute()
+            }
         }
         .overlay(alignment: .bottom) {
             bottomStartNewTrack()
@@ -33,27 +36,32 @@ struct ContentView: View {
     @ViewBuilder
     func bottompReviousRoute() -> some View {
         VStack {
-            if !startNewTrack {
-                Button {
+            Button {
+                if !startNewTrack {
+                    viewModel.getPreviousResult()
                     withAnimation {
                         previousRoute.toggle()
                     }
-                } label: {
-                    ZStack {
-                        Capsule()
-                            .foregroundColor(.blue)
-                            .frame(width: 50, height: 50)
-                        
-                        Image(systemName: "flag.2.crossed")
-                            .foregroundColor(.white)
-                            .font(.title2)
-                            .fontWeight(.bold)
+                    if !previousRoute {
+                        viewModel.mapClear()
+                        viewModel.viewManager = .default
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal)
-                .padding(.vertical, 70)
+            } label: {
+                ZStack {
+                    Circle()
+                        .foregroundColor(.blue)
+                        .frame(width: props.isLandscape ? 70 : 50)
+                    
+                    Image(systemName: !startNewTrack ? "flag.2.crossed" : "camera")
+                        .foregroundColor(.white)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
             }
+            .frame(maxWidth: .infinity, alignment: props.isLandscape ? .trailing : .leading)
+            .padding(.horizontal)
+            .padding(.vertical, props.isLandscape ? 20 : 50)
         }
     }
     
@@ -63,14 +71,21 @@ struct ContentView: View {
             Button {
                 if startNewTrack {
                     viewModel.saveResult()
+                    viewModel.viewManager = .default
+                    viewModel.mapClear()
+                } else {
+                    viewModel.viewManager = .startNewTrack
                 }
-                time = -1
+                viewModel.time = -1
                 viewModel.routeTime = ""
                 withAnimation {
                     startNewTrack.toggle()
                 }
             } label: {
                 HStack {
+                    if props.isLandscape {
+                        bottompReviousRoute()
+                    }
                     if startNewTrack || previousRoute {
                         ZStack {
                             Capsule()
@@ -82,10 +97,10 @@ struct ContentView: View {
                                         .stroke(Color.blue, style: StrokeStyle(lineWidth: 3, dash: [2]))
                                 )
                             
-                            Text(previousRoute ? "time: 1:59, distance: 1.4 km" : "time: \(viewModel.routeTime)" )
-                                .onReceive(timer, perform: { imput in
-                                    time += 1
-                                    viewModel.timer(seconds: time)
+                            Text(previousRoute ? "time: \(viewModel.previousResultTime), distance: \(viewModel.previousResultDistance)" : "time: \(viewModel.routeTime)" )
+                                .onReceive(viewModel.timer, perform: { imput in
+                                    viewModel.time += 1
+                                    viewModel.timer(seconds: viewModel.time)
                                 })
                                 .foregroundColor(.black)
                                 .font(previousRoute ? .title3 : .title2)
@@ -96,7 +111,7 @@ struct ContentView: View {
                         ZStack {
                             Capsule()
                                 .foregroundColor(.blue)
-                                .frame(width: startNewTrack ? 100 : UIScreen.main.bounds.width / 1.1, height: 70)
+                                .frame(width: startNewTrack || props.isLandscape ? 70 : UIScreen.main.bounds.width / 1.1, height: 70)
                             
                             Text(startNewTrack ? "Stop" : "GO")
                                 .foregroundColor(.white)
@@ -107,16 +122,10 @@ struct ContentView: View {
                     }
                 }
             }
-            .frame(maxWidth: .infinity, alignment: startNewTrack ? .trailing : .center)
-            .padding(.horizontal)
-            .padding(.vertical, 70)
-            .disabled(previousRoute)
+            .frame(maxWidth: .infinity, alignment: startNewTrack || props.isLandscape ? .trailing : .center)
+            .padding(.horizontal, !props.isLandscape ? 25 : 50)
+            .padding(.bottom, !props.isLandscape ? 50 : 20)
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
