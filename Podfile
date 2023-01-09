@@ -6,7 +6,7 @@ target 'GoogleMap' do
   use_frameworks!
 
   # Pods for GoogleMap
-  pod 'GoogleMaps', '7.2.0'
+  pod 'GoogleMaps'
 
   target 'GoogleMapTests' do
     inherit! :search_paths
