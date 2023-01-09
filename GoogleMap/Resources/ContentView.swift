@@ -10,10 +10,16 @@ import GoogleMaps
 
 struct ContentView: View {
     
+    @StateObject var viewModel = AuthorizationsViewModel()
+    
     var body: some View {
         VStack {
             ResponsiveView { props in
-                MainView(props: props)
+                if viewModel.userLoggedIn {
+                    MainView(props: props)
+                } else {
+                    AuthorizationsView(viewModel: viewModel, props: props)
+                }
             }
         }
     }

@@ -10,10 +10,9 @@ import RealmSwift
 class RealmService {
     
     func add<T: Object>(object: T) throws {
-        //        let realm = try Realm()
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         let realm = try Realm(configuration: config)
-//        print(realm.configuration.fileURL)
+        print(realm.configuration.fileURL)
         try realm.write {
             realm.add(object, update: .modified)
         }

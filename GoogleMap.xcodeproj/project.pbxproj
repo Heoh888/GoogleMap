@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		72B28931D26366CEAE8F99A4 /* Pods_GoogleMap_GoogleMapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DE222A00E455FB64A92322 /* Pods_GoogleMap_GoogleMapUITests.framework */; };
+		863E989C296BFB7F008A6E23 /* AuthorizationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E989B296BFB7F008A6E23 /* AuthorizationsView.swift */; };
+		863E989F296C03B1008A6E23 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E989E296C03B1008A6E23 /* Extensions.swift */; };
+		863E98A2296C04C7008A6E23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E98A1296C04C7008A6E23 /* LoginView.swift */; };
+		863E98A4296C04D9008A6E23 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E98A3296C04D9008A6E23 /* RegistrationView.swift */; };
+		863E98A7296C0687008A6E23 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E98A6296C0687008A6E23 /* CustomTextField.swift */; };
+		863E98A9296C0AC7008A6E23 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E98A8296C0AC7008A6E23 /* UserModel.swift */; };
+		863E98AB296C4CA0008A6E23 /* AuthorizationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E98AA296C4CA0008A6E23 /* AuthorizationsViewModel.swift */; };
 		864A230A294BB10D002DE344 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A2309294BB10D002DE344 /* MapView.swift */; };
 		864A230D294BCC88002DE344 /* ApiToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864A230C294BCC88002DE344 /* ApiToken.swift */; };
 		8665953C294E776A001B7394 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 8665953B294E776A001B7394 /* Realm */; };
@@ -53,6 +60,13 @@
 		3FB2FC3331E53096C57FF520 /* Pods-GoogleMapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleMapTests.release.xcconfig"; path = "Target Support Files/Pods-GoogleMapTests/Pods-GoogleMapTests.release.xcconfig"; sourceTree = "<group>"; };
 		703E24D8A854CD5BABCB98F1 /* Pods_GoogleMapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleMapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		860F7E53294CBC0900B5FA21 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		863E989B296BFB7F008A6E23 /* AuthorizationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationsView.swift; sourceTree = "<group>"; };
+		863E989E296C03B1008A6E23 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		863E98A1296C04C7008A6E23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		863E98A3296C04D9008A6E23 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		863E98A6296C0687008A6E23 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		863E98A8296C0AC7008A6E23 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		863E98AA296C4CA0008A6E23 /* AuthorizationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationsViewModel.swift; sourceTree = "<group>"; };
 		864A2309294BB10D002DE344 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		864A230C294BCC88002DE344 /* ApiToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiToken.swift; sourceTree = "<group>"; };
 		864A2310294C99EA002DE344 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +127,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		863E989D296C039F008A6E23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				863E989E296C03B1008A6E23 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		863E98A0296C04B1008A6E23 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				863E989B296BFB7F008A6E23 /* AuthorizationsView.swift */,
+				863E98A1296C04C7008A6E23 /* LoginView.swift */,
+				863E98A3296C04D9008A6E23 /* RegistrationView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		863E98A5296C0678008A6E23 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				863E98A6296C0687008A6E23 /* CustomTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8665953F294E7CC9001B7394 /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				86659543294E7D91001B7394 /* RouteModel.swift */,
+				863E98A8296C0AC7008A6E23 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +207,8 @@
 		86C0578D294B92020047F3E7 /* GoogleMap */ = {
 			isa = PBXGroup;
 			children = (
+				863E98A5296C0678008A6E23 /* Components */,
+				863E989D296C039F008A6E23 /* Extensions */,
 				8685FC372964242B00C2F87F /* Resources */,
 				8665953F294E7CC9001B7394 /* Service */,
 				86659542294E7D65001B7394 /* Model */,
@@ -206,6 +249,7 @@
 		86C057B8294B9AA90047F3E7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				863E98A0296C04B1008A6E23 /* Authentication */,
 				864A2309294BB10D002DE344 /* MapView.swift */,
 				8685FC33295E4B4900C2F87F /* ResponsiveView.swift */,
 				8685FC35295E4BA200C2F87F /* MainView.swift */,
@@ -217,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				8685FC31295DD9AD00C2F87F /* MainViewModel.swift */,
+				863E98AA296C4CA0008A6E23 /* AuthorizationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -498,11 +543,18 @@
 			files = (
 				864A230A294BB10D002DE344 /* MapView.swift in Sources */,
 				8685FC36295E4BA200C2F87F /* MainView.swift in Sources */,
+				863E989C296BFB7F008A6E23 /* AuthorizationsView.swift in Sources */,
 				8685FC32295DD9AD00C2F87F /* MainViewModel.swift in Sources */,
+				863E98AB296C4CA0008A6E23 /* AuthorizationsViewModel.swift in Sources */,
+				863E98A7296C0687008A6E23 /* CustomTextField.swift in Sources */,
 				86C057BB294B9AD00047F3E7 /* AppDelegate.swift in Sources */,
 				86C057BF294B9B5A0047F3E7 /* LocationService.swift in Sources */,
+				863E98A9296C0AC7008A6E23 /* UserModel.swift in Sources */,
 				86659544294E7D91001B7394 /* RouteModel.swift in Sources */,
 				86C05791294B92020047F3E7 /* ContentView.swift in Sources */,
+				863E98A2296C04C7008A6E23 /* LoginView.swift in Sources */,
+				863E98A4296C04D9008A6E23 /* RegistrationView.swift in Sources */,
+				863E989F296C03B1008A6E23 /* Extensions.swift in Sources */,
 				86C0578F294B92020047F3E7 /* GoogleMapApp.swift in Sources */,
 				864A230D294BCC88002DE344 /* ApiToken.swift in Sources */,
 				86659541294E7CDE001B7394 /* RealmService.swift in Sources */,
