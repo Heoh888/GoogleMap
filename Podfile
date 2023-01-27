@@ -6,7 +6,9 @@ target 'GoogleMap' do
   use_frameworks!
 
   # Pods for GoogleMap
-  pod 'GoogleMaps', '7.2.0'
+  pod 'GoogleMaps'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
 
   target 'GoogleMapTests' do
     inherit! :search_paths
