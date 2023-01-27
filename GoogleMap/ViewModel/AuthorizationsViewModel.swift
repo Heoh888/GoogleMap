@@ -8,7 +8,7 @@
 import Foundation
 
 class AuthorizationsViewModel: ObservableObject {
-    @Published var userLoggedIn = false
+    @Published var userLoggedIn = true
     
     let service = RealmService()
     
@@ -26,7 +26,6 @@ class AuthorizationsViewModel: ObservableObject {
     
     func login(userName: String, password: String) {
         guard let result = service.read(UserModel.self) else { return }
-        print(result)
         result.forEach {
             if $0.login == userName && $0.password == password {
                 userLoggedIn = true

@@ -5,38 +5,45 @@
 //  Created by Алексей Ходаков on 15.12.2022.
 //
 
-import Combine
+import Foundation
 import CoreLocation
+import RxSwift
+import RxCocoa
 
-class LocationService: NSObject, ObservableObject {
-    private let locationManager = CLLocationManager()
+class LocationService: NSObject {
     
-    @Published var location: CLLocation? {
-        willSet { objectWillChange.send() }
-    }
+    static let instance = LocationService()
     
-    var latitude: CLLocationDegrees {
-        return location?.coordinate.latitude ?? 0
-    }           
-    
-    var longitude: CLLocationDegrees {
-        return location?.coordinate.longitude ?? 0
-    }
-    
-    override init() {
+    private override init() {
         super.init()
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.requestWhenInUseAuthorization()
+        configureLocationManager()
+    }
+    
+    let locationManager = CLLocationManager()
+    var location = BehaviorRelay<CLLocation?>(value: nil)
+    
+    func startUpdatingLocation() {
         locationManager.startUpdatingLocation()
+    }
+    
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    private func configureLocationManager() {
+        locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startMonitoringSignificantLocationChanges()
+        locationManager.startUpdatingLocation()
+        locationManager.requestAlwaysAuthorization()
     }
 }
 
 extension LocationService: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        self.location = location
+        self.location.accept(location)
     }
 }

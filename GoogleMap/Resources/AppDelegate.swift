@@ -13,4 +13,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         GMSServices.provideAPIKey(TOKEN)
         return true
     }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        
+    }
 }

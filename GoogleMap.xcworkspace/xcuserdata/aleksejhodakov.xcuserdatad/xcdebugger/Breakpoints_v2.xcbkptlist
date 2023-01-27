@@ -14,8 +14,8 @@
             filePath = "GoogleMap/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "MapView"
             landmarkType = "14">
          </BreakpointContent>
@@ -33,22 +33,6 @@
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "getPreviousResult()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2FFDE46A-6435-4FF1-A931-65497D551336"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleMap/Service/RealmService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "add(object:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -145,22 +129,6 @@
             endingLineNumber = "16"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0CCD9D0F-89BA-4C98-8BB0-BCDAC76C87E7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleMap/View/MainView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "bottomStartNewTrack()"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -341,8 +309,8 @@
             filePath = "GoogleMap/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "makeCoordinator()"
             landmarkType = "7">
          </BreakpointContent>
@@ -357,8 +325,8 @@
             filePath = "GoogleMap/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "updateUIView(_:context:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -573,8 +541,8 @@
             filePath = "GoogleMap/View/MapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "Coordinator"
             landmarkType = "3">
          </BreakpointContent>
@@ -871,8 +839,8 @@
             filePath = "GoogleMap/View/MainView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "bottomStartNewTrack()"
             landmarkType = "7">
          </BreakpointContent>
@@ -887,8 +855,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "saveResult()"
             landmarkType = "7">
          </BreakpointContent>
@@ -903,8 +871,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "saveResult()"
             landmarkType = "7">
          </BreakpointContent>
@@ -919,8 +887,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "saveResult()"
             landmarkType = "7">
             <Locations>
@@ -967,41 +935,9 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "saveResult()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F6D4D2B4-BC59-4E80-A8B9-25FBEE515A8E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EF1B4912-A9BF-4254-8F0B-A950BBF571CB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1015,8 +951,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "startNewTrack(coordinates:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1031,8 +967,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "getPreviousResult()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1047,8 +983,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "getPreviousResult()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1063,25 +999,9 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "getPreviousResult()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A132949E-40F8-453A-98CB-C0BE21B167A5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1095,8 +1015,8 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "startNewTrack(coordinates:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1111,9 +1031,257 @@
             filePath = "GoogleMap/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
             landmarkName = "startNewTrack(coordinates:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63563D7B-E644-4C53-99F2-BA50FB955593"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "MainViewModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - f1050eaa2664ea72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of GoogleMap.MainViewModel.locationService : GoogleMap.LocationService"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - 36113e0b0e2f17fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.locationService.getter : GoogleMap.LocationService"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - 9e2b845a2f3dabf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.locationService.setter : GoogleMap.LocationService"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "140">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - e13e4987cd8eb483"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.locationService.modify : GoogleMap.LocationService"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - edb476fcce740c18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.locationService.modify : GoogleMap.LocationService with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - 61c7e5561e2145fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.$locationService.getter : Combine.Published&lt;GoogleMap.LocationService&gt;.Publisher"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - c55500ba626881f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.$locationService.setter : Combine.Published&lt;GoogleMap.LocationService&gt;.Publisher"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - ddfcca93cbfe59d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.$locationService.modify : Combine.Published&lt;GoogleMap.LocationService&gt;.Publisher"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - 83604cbf008cb14f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.$locationService.modify : Combine.Published&lt;GoogleMap.LocationService&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "C2435FA6-BBDE-4681-B430-5FD5F87AEC0D - c55e75364b8feb37"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleMap.MainViewModel.init() -&gt; GoogleMap.MainViewModel"
+                  moduleName = "GoogleMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleksejhodakov/Documents/Repositories/GoogleMap/GoogleMap/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D09F6BB5-8084-46C6-9CAD-88AD12C7BB92"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "79F80A32-FD55-4BF5-9929-9A36F6FCA3D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF0CE1E5-34F0-4AC1-9DED-619C889A43AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "getPreviousResult()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC1D3435-92C1-4C30-B68B-21D34CADFC64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleMap/ViewModel/MainViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "myLocation()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

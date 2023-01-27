@@ -24,17 +24,61 @@ struct MainView: View {
         }
         .overlay(alignment: .top) {
             if !props.isLandscape {
-                bottompReviousRoute()
+                VStack {
+                    VStack(spacing: 15) {
+                        buttonReviousRoute()
+                        buttonMyLocation()
+                    }
+                    .padding(.leading)
+                    .frame(maxWidth: getRect().width, alignment: .leading)
+                    .padding(.top, 50)
+                    Spacer()
+                    
+                    bottomStartNewTrack()
+                        .padding(.horizontal)
+                        .padding(.bottom, 30)
+                }
+            } else {
+                HStack(spacing: 15) {
+                    buttonMyLocation()
+                    buttonReviousRoute()
+                    bottomStartNewTrack()
+                }
+                .frame(maxWidth: getRect().width, maxHeight: getRect().height, alignment: .bottomTrailing)
+                .padding(20)
             }
-        }
-        .overlay(alignment: .bottom) {
-            bottomStartNewTrack()
+            
         }
         .ignoresSafeArea()
     }
     
     @ViewBuilder
-    func bottompReviousRoute() -> some View {
+    func button(image: String) -> some View {
+        ZStack {
+            Circle()
+                .foregroundColor(.blue)
+                .frame(width: props.isLandscape ? 70 : 50)
+            
+            Image(systemName: image)
+                .foregroundColor(.white)
+                .font(.title2)
+                .fontWeight(.bold)
+        }
+    }
+    
+    @ViewBuilder
+    func buttonMyLocation() -> some View {
+        VStack {
+            Button {
+                viewModel.myLocation()
+            } label: {
+                button(image: "location.circle.fill")
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func buttonReviousRoute() -> some View {
         VStack {
             Button {
                 if !startNewTrack {
@@ -48,20 +92,8 @@ struct MainView: View {
                     }
                 }
             } label: {
-                ZStack {
-                    Circle()
-                        .foregroundColor(.blue)
-                        .frame(width: props.isLandscape ? 70 : 50)
-                    
-                    Image(systemName: !startNewTrack ? "flag.2.crossed" : "camera")
-                        .foregroundColor(.white)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                }
+                button(image: !startNewTrack ? "flag.2.crossed" : "camera")
             }
-            .frame(maxWidth: .infinity, alignment: props.isLandscape ? .trailing : .leading)
-            .padding(.horizontal)
-            .padding(.vertical, props.isLandscape ? 20 : 50)
         }
     }
     
@@ -83,9 +115,6 @@ struct MainView: View {
                 }
             } label: {
                 HStack {
-                    if props.isLandscape {
-                        bottompReviousRoute()
-                    }
                     if startNewTrack || previousRoute {
                         ZStack {
                             Capsule()
@@ -111,20 +140,17 @@ struct MainView: View {
                         ZStack {
                             Capsule()
                                 .foregroundColor(.blue)
-                                .frame(width: startNewTrack || props.isLandscape ? 70 : UIScreen.main.bounds.width / 1.1, height: 70)
+                                .frame(width: startNewTrack || props.isLandscape ? 70 : getRect().width / 1.1, height: 70)
                             
                             Text(startNewTrack ? "Stop" : "GO")
                                 .foregroundColor(.white)
-                                .font(.title)
+                                .font(startNewTrack ? .title2 : .title)
                                 .fontWeight(.bold)
                                 .animation(nil)
                         }
                     }
                 }
             }
-            .frame(maxWidth: .infinity, alignment: startNewTrack || props.isLandscape ? .trailing : .center)
-            .padding(.horizontal, !props.isLandscape ? 25 : 50)
-            .padding(.bottom, !props.isLandscape ? 50 : 20)
         }
     }
 }

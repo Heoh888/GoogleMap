@@ -7,6 +7,7 @@
 
 import GoogleMaps
 import RealmSwift
+import SwiftUI
 
 enum MainManager {
     case startNewTrack
@@ -27,7 +28,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var coordinates = [CLLocationCoordinate2D]()
     var locationManager = CLLocationManager()
-    
+    var locationService = LocationService.instance
     let service = RealmService()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -35,6 +36,7 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
+        
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -157,6 +159,19 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
         mapView.clear()
     }
     
+    func myLocation() {
+        locationService
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17, bearing: 0, viewingAngle: 75)
+                print(position.viewingAngle)
+                self?.mapView.animate(to: position)
+            }
+            .dispose()
+    }
+    
     private func distanceTwoPoints(firstPoint: CLLocationCoordinate2D, secondPoint: CLLocationCoordinate2D) -> Double {
         let coordinate0 = CLLocation(latitude: firstPoint.latitude, longitude: firstPoint.longitude)
         let coordinate1 = CLLocation(latitude: secondPoint.latitude, longitude: secondPoint.longitude)
@@ -182,12 +197,12 @@ class MainViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
             let arraySlice = coordinates.suffix(2)
             path.add(CLLocationCoordinate2D(latitude: arraySlice.first!.latitude, longitude: arraySlice.first!.longitude))
             path.add(CLLocationCoordinate2D(latitude: arraySlice.last!.latitude, longitude: arraySlice.last!.longitude))
-
+            
             let polyline = GMSPolyline(path: path)
             polyline.strokeWidth = 7.0
             polyline.strokeColor = .systemBlue
             polyline.map = mapView
-
+            
             let circleCenter = CLLocationCoordinate2D(latitude: arraySlice.first!.latitude, longitude: arraySlice.first!.longitude)
             let circle = GMSCircle(position: circleCenter, radius: 0.5)
             circle.fillColor = .white
